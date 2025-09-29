@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enrico Roter - Advogado Trabalhista</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #004a99;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+    main {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    main h2 {
+      color: #004a99;
+      margin-top: 0;
+    }
+    main p {
+      line-height: 1.6;
+    }
+    label, select {
+      font-size: 16px;
+      margin-top: 15px;
+      display: block;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .btn-contact {
+      display: inline-block;
+      background: #007acc;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #777;
+    }
+    @media (max-width: 640px) {
+      main {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Enrico Roter</h1>
+  <p>Advogado Trabalhista | Porto Alegre - RS</p>
+</header>
+
+<main>
+  <h2>Defesa Forte para seus Direitos Trabalhistas</h2>
+  <p>Enrico Roter atua com dedicação e ética para garantir seus direitos trabalhistas, oferecendo atendimento personalizado e soluções jurídicas eficazes para trabalhadores e empresas.</p>
+  
+  <h3>Antes de seguir, por favor, escolha o motivo do seu contato:</h3>
+  <form id="contactForm">
+    <label for="interest">Qual é o seu interesse?</label>
+    <select id="interest" name="interest" required>
+      <option value="">-- Selecione --</option>
+      <option value="Reclamação Trabalhista">Reclamação Trabalhista</option>
+      <option value="Rescisão Contratual">Rescisão Contratual</option>
+      <option value="Horas Extras">Horas Extras</option>
+      <option value="Assédio ou Discriminação">Assédio ou Discriminação</option>
+      <option value="Outra questão trabalhista">Outra questão trabalhista</option>
+    </select>
+    <button type="submit" class="btn-contact">Continuar no WhatsApp</button>
+  </form>
+</main>
+
+<footer>
+  &copy; 2025 Enrico Roter - OAB RS 123456
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    const interest = document.getElementById('interest').value;
+    if (!interest) {
+      alert('Por favor, selecione seu interesse para continuar.');
+      return;
+    }
+    const phone = '555181218676'; // número no formato para WhatsApp
+    const message = encodeURIComponent(`Olá, tenho interesse em: ${interest}. Gostaria de mais informações.`);
+    const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  });
+</script>
+
+</body>
+</html>
